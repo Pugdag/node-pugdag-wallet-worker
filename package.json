@@ -1,0 +1,38 @@
+{
+  "name": "@pugdag/wallet-worker",
+  "version": "1.1.26",
+  "description": "Worker (node + browser) wrapping pugdag-wallet",
+  "main": "dist/index.js",
+  "authors": [
+    {
+      "name": "Kaspa Developers"
+    },
+    {
+      "name": "Pugdag Developers"
+    }
+  ],
+  "license": "ISC",
+  "scripts": {
+    "watch": "tsc --watch",
+    "prepublishOnly": "rm -rf ./dist && rm -f package-lock.json && npm install --also=dev && tsc"
+  },
+  "dependencies": {
+    "@aspectron/flow-logger": ">=1.0.1",
+    "@aspectron/web-worker": "^1.0.0",
+    "@pugdag/wallet": "github:Pugdag/node-pugdag-wallet"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.9",
+    "ts-node": "^9.0.0",
+    "typescript": "*"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "types",
+    "index.ts",
+    "README.md",
+    "tsconfig.json",
+    "worker.js"
+  ]
+}
